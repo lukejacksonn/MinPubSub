@@ -10,13 +10,13 @@
   var cache = context.c_ || {}; //check for 'c_' cache for unit testing
 
   MinPubSub.publish = function ( /* String */ topic, /* Array? */ args) {
-    // summary: 
+    // summary:
     //    Publish some data on a named topic.
     // topic: String
     //    The channel to publish on
     // args: Array?
     //    The data to publish. Each array item is converted into an ordered
-    //    arguments on the subscribed functions. 
+    //    arguments on the subscribed functions.
     //
     // example:
     //    Publish stuff on '/some/topic'. Anything subscribed will be called
@@ -39,13 +39,13 @@
     // topic: String
     //    The channel to subscribe to
     // callback: Function
-    //    The handler event. Anytime something is publish'ed on a 
+    //    The handler event. Anytime something is publish'ed on a
     //    subscribed channel, the callback will be called with the
     //    published array as ordered arguments.
     //
     // returns: Array
     //    A handle which can be used to unsubscribe this particular subscription.
-    //        
+    //
     // example:
     //    subscribe('/some/topic', function(a, b, c){ /* handle data */ });
 
@@ -92,4 +92,4 @@
     context.unsubscribe = MinPubSub.unsubscribe;
   }
 
-})(this.window);
+})(window);
